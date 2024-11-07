@@ -1,0 +1,12 @@
+{% extends 'navbar.html'%}{% load static %}
+  {% block content %}
+    <h1 class="team_name">{{team_data.name}} Team</h1>
+    <p class="team-desc">{{team_data.description}}</p>
+    <div class="members">
+      {% for i in team_data.members %}
+      <li class="task">{{i}}</li>
+      {% endfor %}
+    </div>
+  {% endblock content %}
+    
+

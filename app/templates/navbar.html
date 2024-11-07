@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>BCCA Teams</title>
+  </head>
+  <body>
+    <nav class="navigation">
+        <a class="active" href='{% url "home" %}'>Home</a>
+        <a href='{% url "team-view" team="management" %}'>Management</a>
+        <a href='{% url "team-view" team="procurement" %}'>Procurement</a>
+        <a href='{% url "team-view" team="documentation" %}'>Documentation</a>
+        <a href='{% url "team-view" team="community" %}'>Community</a>
+    </nav>
+    <div class="contain">
+      {%block content%} {% endblock content %}
+    </div>
+  </body>
